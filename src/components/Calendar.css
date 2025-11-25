@@ -1,0 +1,29 @@
+.calendar {
+  width: 100%;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day-name {
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem 0.5rem;
+  color: #888888;
+  border-bottom: 1px solid #333333;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .calendar-grid {
+    gap: 4px;
+  }
+  
+  .day-name {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.8rem;
+  }
+}

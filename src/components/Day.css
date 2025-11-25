@@ -1,0 +1,101 @@
+.day {
+  position: relative;
+  border: 1px solid #333333;
+  min-height: 100px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  background: #0a0a0a;
+}
+
+.day:hover {
+  border-color: #666666;
+  background: #1a1a1a;
+}
+
+.day.empty {
+  background-color: #050505;
+  cursor: default;
+  border: 1px solid #222222;
+}
+
+.day.empty:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #222222;
+  background: #050505;
+}
+
+.day.today {
+  border-color: #ffffff;
+  background: #2a2a2a;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.date-number {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.day.today .date-number {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.mood-emoji {
+  font-size: 2rem;
+  margin-top: auto;
+}
+
+.today-indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ffffff;
+}
+
+.has-mood {
+  background: #151515;
+}
+
+@media (max-width: 768px) {
+  .day {
+    min-height: 60px;
+    padding: 0.25rem;
+  }
+  
+  .date-number {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .mood-emoji {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .day {
+    min-height: 50px;
+  }
+  
+  .mood-emoji {
+    font-size: 1.2rem;
+  }
+  
+  .today-indicator {
+    width: 6px;
+    height: 6px;
+  }
+}
